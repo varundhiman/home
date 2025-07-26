@@ -42,6 +42,7 @@ header h1 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .icon-card:hover {
@@ -92,8 +93,9 @@ header h1 {
   .icon-card {
     padding: 2rem 1.5rem;
   }
-}/
-* Under Construction Styles */
+}
+
+/* Under Construction Styles */
 .under-construction {
   min-height: 100vh;
   display: flex;
@@ -198,8 +200,9 @@ header h1 {
   .construction-content h2 {
     font-size: 1.3rem;
   }
-}/* Social M
-edia Styles */
+}
+
+/* Social Media Styles */
 .social-media {
   margin-top: 3rem;
   padding-top: 2rem;
@@ -259,5 +262,209 @@ edia Styles */
   .social-link {
     width: 45px;
     height: 45px;
+  }
+}
+
+/* Codenames Game Styles */
+.codenames-game {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.game-header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.game-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.mode-button, .new-game-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.mode-button:hover, .new-game-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.game-status {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.current-turn, .game-over {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.current-turn.red, .game-over.red {
+  background: rgba(220, 38, 127, 0.2);
+  border: 2px solid #dc267f;
+  color: #ff6b9d;
+}
+
+.current-turn.blue, .game-over.blue {
+  background: rgba(59, 130, 246, 0.2);
+  border: 2px solid #3b82f6;
+  color: #60a5fa;
+}
+
+.codenames-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.codenames-card {
+  aspect-ratio: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;
+  font-weight: 500;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.codenames-card.unrevealed {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.codenames-card.unrevealed:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.codenames-card.red {
+  background: linear-gradient(135deg, #dc267f 0%, #ff6b9d 100%);
+  border-color: #dc267f;
+  color: white;
+}
+
+.codenames-card.blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  border-color: #3b82f6;
+  color: white;
+}
+
+.codenames-card.neutral {
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  border-color: #6b7280;
+  color: white;
+}
+
+.codenames-card.assassin {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  border-color: #1f2937;
+  color: #ef4444;
+}
+
+.card-word {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-indicator {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.game-rules {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.game-rules h3 {
+  margin-top: 0;
+  color: #10B981;
+  font-size: 1.2rem;
+}
+
+.game-rules ul {
+  list-style: none;
+  padding: 0;
+}
+
+.game-rules li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.game-rules li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .codenames-game {
+    padding: 1rem;
+  }
+  
+  .game-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .game-header h1 {
+    font-size: 2rem;
+  }
+  
+  .codenames-board {
+    gap: 0.5rem;
+  }
+  
+  .card-word {
+    font-size: 0.8rem;
+  }
+  
+  .current-turn, .game-over {
+    font-size: 1.2rem;
   }
 }
