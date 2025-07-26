@@ -1,14 +1,32 @@
 import React from 'react';
 
 export const WeightIcon = () => (
-  <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M6.5 6.5h11v11h-11z"/>
-    <path d="M6 12h12"/>
-    <path d="M12 6v12"/>
-    <circle cx="9" cy="9" r="1"/>
-    <circle cx="15" cy="9" r="1"/>
-    <circle cx="9" cy="15" r="1"/>
-    <circle cx="15" cy="15" r="1"/>
+  <svg width="64" height="64" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor:"#8B5CF6", stopOpacity:1}} />
+        <stop offset="100%" style={{stopColor:"#10B981", stopOpacity:1}} />
+      </linearGradient>
+    </defs>
+    
+    {/* Background circle */}
+    <circle cx="16" cy="16" r="15" fill="url(#gradient)" stroke="white" strokeWidth="2"/>
+    
+    {/* Scale base */}
+    <rect x="8" y="22" width="16" height="3" rx="1.5" fill="white"/>
+    
+    {/* Scale platform */}
+    <rect x="6" y="18" width="20" height="2" rx="1" fill="white"/>
+    
+    {/* Scale post */}
+    <rect x="15" y="12" width="2" height="6" fill="white"/>
+    
+    {/* Scale dial */}
+    <circle cx="16" cy="12" r="4" fill="white"/>
+    <circle cx="16" cy="12" r="3" fill="url(#gradient)"/>
+    
+    {/* Scale needle */}
+    <line x1="16" y1="12" x2="18" y2="10" stroke="white" strokeWidth="1" strokeLinecap="round"/>
   </svg>
 );
 
