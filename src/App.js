@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import IconCard from './components/IconCard';
 import UnderConstruction from './components/UnderConstruction';
-import { WeightIcon, BlogIcon, ReviewIcon } from './components/Icons';
+import { WeightIcon, BlogIcon, ReviewIcon, InstagramIcon, LinkedInIcon } from './components/Icons';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -70,6 +70,29 @@ function App() {
             />
           ))}
         </main>
+        
+        <footer className="social-media">
+          <div className="social-links">
+            <a 
+              href="https://www.instagram.com/varundhiman_insta/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link instagram"
+              aria-label="Follow me on Instagram"
+            >
+              <InstagramIcon />
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/varun-dhiman/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="social-link linkedin"
+              aria-label="Connect with me on LinkedIn"
+            >
+              <LinkedInIcon />
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );
