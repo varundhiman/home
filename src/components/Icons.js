@@ -42,7 +42,7 @@ export const BlogIcon = () => (
 
 export const ReviewIcon = () => (
   <img 
-    src="/viberoost.png" 
+    src="/viberoost.jpg" 
     alt="Viberoost" 
     width="64" 
     height="64" 
