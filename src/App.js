@@ -10,6 +10,8 @@ function App() {
   const handleIconClick = (type) => {
     if (type === 'weight') {
       window.location.href = 'https://weight.varundhiman.com';
+    } else if (type === 'review') {
+      window.location.href = 'https://viberoost.com';
     } else {
       setCurrentPage(type);
     }
@@ -40,16 +42,15 @@ function App() {
       title: 'Reviews',
       description: 'Discover my recommendations',
       ariaLabel: 'Recommendations'
-    }
+    },
+
   ];
 
   if (currentPage === 'blog') {
     return <UnderConstruction title="Blog" onBack={handleBackToHome} />;
   }
 
-  if (currentPage === 'review') {
-    return <UnderConstruction title="Reviews" onBack={handleBackToHome} />;
-  }
+
 
   return (
     <div className="App">
